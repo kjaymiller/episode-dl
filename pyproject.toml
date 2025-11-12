@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools-scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "EpisodeDL"
+dynamic = ["version"]
+description = "EpisodeD(own)L(oader). Download Podcast Episodes with Ease"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Jay Miller", email = "kjaymiller@gmail.com"}]
+requires-python = ">=3.14"
+dependencies = [
+    "feedparser",
+    "requests",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[project.urls]
+Homepage = "https://github.com/kjaymiller/episode_dl"
+
+[tool.setuptools-scm]
+write_to = "episode_dl/_version.py"
